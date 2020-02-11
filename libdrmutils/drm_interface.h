@@ -510,8 +510,6 @@ struct DRMCrtcInfo {
   bool concurrent_writeback = false;
   uint32_t num_mnocports = 0;
   uint32_t mnoc_bus_width = 0;
-  uint32_t num_mnocports;
-  uint32_t mnoc_bus_width;
   bool use_baselayer_for_stage = false;
   uint32_t vig_limit_index = 0;
   uint32_t dma_limit_index = 0;
@@ -519,6 +517,7 @@ struct DRMCrtcInfo {
   uint32_t rotation_limit_index = 0;
   uint32_t line_width_constraints_count = 0;
   std::vector< std::pair <uint32_t, uint32_t> > line_width_limits;
+  float vbif_cmd_ff = 0.0f;
 };
 
 enum struct DRMPlaneType {
